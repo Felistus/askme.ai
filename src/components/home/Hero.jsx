@@ -2,7 +2,7 @@ import { Box, Title, Text, Button } from "@mantine/core";
 
 export default function Hero() {
   return (
-    <Box className="flex space-x-[39px] lg:h-[545px] border items-center">
+    <Box className="flex space-x-[39px] lg:h-[545px] items-center">
       <Box className="flex-1">
         <Title
           order={1}

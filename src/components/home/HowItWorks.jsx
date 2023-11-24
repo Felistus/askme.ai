@@ -18,21 +18,21 @@ export default function HowItWorks() {
       title: "Discover top rated products effortlessly",
       description:
         "Users can easily discover top-rated products, get detailed information, and find purchasing options.",
-      icon: <TopRated />,
+      icon: <TopRated color="#4723C2" />,
     },
     {
       id: 2,
       title: "Hassle free complaint solution",
       description:
         "Report issues, express concerns and let our Ai agent guide you through quick and effective solutions",
-      icon: <Complaint />,
+      icon: <Complaint color="#4723C2" />,
     },
     {
       id: 3,
       title: "Continous support, anytime, anywhere",
       description:
         "From scheduling meetings to uncovering exlusive deals, our AI is here for ongoing assistance whenver you need it",
-      icon: <Support />,
+      icon: <Support color="#4723C2" />,
     },
   ];
   return (

@@ -6,6 +6,7 @@ import Logo from "../components/global/Logo";
 const Hero = lazy(() => import("../components/home/Hero"));
 const HowItWorks = lazy(() => import("../components/home/HowItWorks"));
 const Testimonies = lazy(() => import("../components/home/Testimonies"));
+const Features = lazy(() => import("../components/home/Features"));
 
 export default function Home() {
   return (
@@ -44,6 +45,17 @@ export default function Home() {
               }
             >
               <Testimonies />
+            </Suspense>
+          </Box>
+          <Box className="w-full bg-neutral-100 py-[112px]">
+            <Suspense
+              fallback={
+                <div className="w-full h-auto pt-16 flex items-center justify-center">
+                  <Logo />
+                </div>
+              }
+            >
+              <Features />
             </Suspense>
           </Box>
         </Box>

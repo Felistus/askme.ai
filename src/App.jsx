@@ -15,7 +15,7 @@ export default function App() {
       theme={{
         colors: {
           primary: ["#228B22"],
-          neutral: ["#F7F7F7", "#1E2028", "#323442"],
+          neutral: ["#F7F7F7", "#1E2028", "#323442", "#EDEEF3"],
           white: ["#FFFFFF"],
           secondary: ["#4723C2"],
         },

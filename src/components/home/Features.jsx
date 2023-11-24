@@ -7,8 +7,8 @@ import Complaint from "../../assets/icons/Complaint";
 export default function Features() {
   return (
     <Container size={1215} px="md" className="flex flex-col items-center">
-      <Box className="flex space-x-20 lg:h-[610px] items-center ">
-        <Box className="h-full w-[570px] hidden lg:flex bg-red-900">ss</Box>
+      <Box className="flex lg:space-x-20 lg:h-[610px] items-center ">
+        <Box className="h-full w-[570px] hidden lg:flex bg-red-900"></Box>
         <Box className="flex-1">
           <FeaturesCard
             icon={<TopRated color="#228B22" />}

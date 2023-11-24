@@ -6,6 +6,7 @@ import CustomFonts from "./components/CustomFonts";
 import Logo from "./components/global/Logo";
 
 const Home = lazy(() => import("./pages/home"));
+const FeaturesHome = lazy(() => import("./pages/features"));
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
         <>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/features" element={<FeaturesHome />} />
           </Routes>
         </>
       </Suspense>

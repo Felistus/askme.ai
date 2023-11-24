@@ -9,7 +9,7 @@ const HowItWorks = lazy(() => import("../components/home/HowItWorks"));
 const Testimonies = lazy(() => import("../components/home/Testimonies"));
 const Features = lazy(() => import("../components/home/Features"));
 
-export default function Home() {
+export default function FeaturesHome() {
   return (
     <Stack mih="100dvh" spacing={0} className="w-full">
       <HeaderComponent />

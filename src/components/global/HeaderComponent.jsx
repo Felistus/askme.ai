@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Container,
   Header,
@@ -16,25 +16,21 @@ import { useDisclosure } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 import useScrollPosition from "../../hooks/useScrollPosition";
 import Logo from "./Logo";
-
-const links = [
-  { link: "/", label: "Home" },
-  { link: "/features", label: "features" },
-  { link: "/pricing", label: "pricing" },
-  { link: "/contact", label: "contact" },
-];
+import { links } from "../../assets/data/menuItems";
 
 export function HeaderComponent() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(-1);
   const scrollPosition = useScrollPosition();
+  const currentURL = window.location;
+  const router = currentURL.pathname;
 
   const items = links.map((link, index) => (
     <Link key={link.label} to={link.link}>
       <Text
         className={`${
           active === index
-            ? "text-neutral-50 bg-primary-500 px-4 py-1"
+            ? " border-b-4 border-b-primary-500 px-4 py-1"
             : "hover:text-primary-500"
         } text-sm font-inter-medium capitalize `}
       >
@@ -43,28 +39,25 @@ export function HeaderComponent() {
     </Link>
   ));
 
-  // useEffect(() => {
-  //   switch (router.asPath) {
-  //     case "/":
-  //       setActive(0);
-  //       break;
-  //     case "/about":
-  //       setActive(1);
-  //       break;
-  //     case "/categories":
-  //       setActive(2);
-  //       break;
-  //     case "/my-bookings":
-  //       setActive(3);
-  //       break;
-  //     case "/market-place":
-  //       setActive(4);
-  //       break;
+  useEffect(() => {
+    switch (router) {
+      case "/":
+        setActive(0);
+        break;
+      case "/features":
+        setActive(1);
+        break;
+      case "/pricing":
+        setActive(2);
+        break;
+      case "/contact":
+        setActive(3);
+        break;
 
-  //     default:
-  //       break;
-  //   }
-  // }, [router]);
+      default:
+        break;
+    }
+  }, [router]);
   return (
     <Header
       withBorder={false}

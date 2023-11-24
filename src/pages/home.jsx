@@ -1,8 +1,11 @@
 import { Box, Stack, Container } from "@mantine/core";
 import { HeaderComponent } from "../components/global/HeaderComponent";
-import Hero from "../components/home/Hero";
-import HowItWorks from "../components/home/HowItWorks";
-import Testimonies from "../components/home/Testimonies";
+import { Suspense, lazy } from "react";
+import Logo from "../components/global/Logo";
+
+const Hero = lazy(() => import("../components/home/Hero"));
+const HowItWorks = lazy(() => import("../components/home/HowItWorks"));
+const Testimonies = lazy(() => import("../components/home/Testimonies"));
 
 export default function Home() {
   return (
@@ -11,13 +14,37 @@ export default function Home() {
         <HeaderComponent />
         <Box className="flex-1 bg-neutral-200">
           <Container size={1215} px="md" mb={125} mt={115}>
-            <Hero />
+            <Suspense
+              fallback={
+                <div className="w-full h-auto pt-16 flex items-center justify-center">
+                  <Logo />
+                </div>
+              }
+            >
+              <Hero />
+            </Suspense>
           </Container>
           <Box className="w-full bg-secondary-50 py-[112px]">
-            <HowItWorks />
+            <Suspense
+              fallback={
+                <div className="w-full h-auto pt-16 flex items-center justify-center">
+                  <Logo />
+                </div>
+              }
+            >
+              <HowItWorks />
+            </Suspense>
           </Box>
           <Box className="w-full bg-neutral-900 py-[112px]">
-            <Testimonies />
+            <Suspense
+              fallback={
+                <div className="w-full h-auto pt-16 flex items-center justify-center">
+                  <Logo />
+                </div>
+              }
+            >
+              <Testimonies />
+            </Suspense>
           </Box>
         </Box>
         <Box className="w-full h-[192px] bg-primary-900">

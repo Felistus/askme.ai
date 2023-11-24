@@ -37,7 +37,7 @@ export default function HowItWorks() {
   ];
   return (
     <Container size={1215} px={70} className="flex flex-col items-center">
-      <Title order={2} fz={36} className="font-inter-bold">
+      <Title order={2} fz={36} className="font-inter-bold text-center">
         How it works
       </Title>
       <Box my={80}>

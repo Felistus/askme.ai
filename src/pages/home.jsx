@@ -2,6 +2,7 @@ import { Box, Stack, Container } from "@mantine/core";
 import { HeaderComponent } from "../components/global/HeaderComponent";
 import Hero from "../components/home/Hero";
 import HowItWorks from "../components/home/HowItWorks";
+import Testimonies from "../components/home/Testimonies";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
           </Container>
           <Box className="w-full bg-secondary-50 py-[112px]">
             <HowItWorks />
+          </Box>
+          <Box className="w-full bg-neutral-900 py-[112px]">
+            <Testimonies />
           </Box>
         </Box>
         <Box className="w-full h-[192px] bg-primary-900">
